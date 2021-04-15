@@ -20,3 +20,7 @@ Route::get('/portofolio-saya', function () {
 })->name('porto');
 
 Route::get('/identitas-saya', 'ProfileController@index')->name('iden');
+
+// route untuk product
+//Route::resource('product', 'ProductController');
+Route::get('product', 'ProductController@index');
