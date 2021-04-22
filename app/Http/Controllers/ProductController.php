@@ -13,4 +13,21 @@ class ProductController extends Controller
 //        dd($data);
         return view('product.index', compact('products'));
     }
+
+    public function add()
+    {
+        return view('product.add');
+    }
+
+    public function save(Request $request)
+    {
+//        dd($request->all());
+//        $request->validate([
+//            'name' => 'required',
+//            'description' => 'required'
+//        ]);
+
+        Product::create($request->all());
+        return redirect()->route('product.index');
+    }
 }

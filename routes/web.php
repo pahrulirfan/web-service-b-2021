@@ -23,4 +23,6 @@ Route::get('/identitas-saya', 'ProfileController@index')->name('iden');
 
 // route untuk product
 //Route::resource('product', 'ProductController');
-Route::get('product', 'ProductController@index');
+Route::get('product', 'ProductController@index')->name('product.index');
+Route::get('product/add', 'ProductController@add')->name('product.add');
+Route::post('product/save', 'ProductController@save')->name('product.save');
