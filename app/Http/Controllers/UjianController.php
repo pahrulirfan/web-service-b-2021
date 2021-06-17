@@ -37,7 +37,7 @@ class UjianController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nama_mk' => 'required|integer',
+            'nama_mk' => 'required',
             'dosen' => 'required',
             'jumlah_soal' => 'required|integer',
             'keterangan' => 'required'

@@ -17,14 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('semua', function(){
-//    return 'Hello API';
-    $data = \App\Midsemester::all();
-    return $data;
-});
+//Route::group(['prefix'=> 'v1'], function (){
 
-Route::get('satu/{id}', function($id){
-//    return 'Hello API';
-    $data = \App\Midsemester::where('id_043', $id)->first();
-    return $data;
-});
+Route::get('barang', 'API\ProductController@index');
+
+Route::get('barang/{id}', 'API\ProductController@show');
+
+//});
