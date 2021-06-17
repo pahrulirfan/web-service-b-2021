@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('semua', function(){
+//    return 'Hello API';
+    $data = \App\Midsemester::all();
+    return $data;
+});
+
+Route::get('satu/{id}', function($id){
+//    return 'Hello API';
+    $data = \App\Midsemester::where('id_043', $id)->first();
+    return $data;
+});

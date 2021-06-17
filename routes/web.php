@@ -33,3 +33,6 @@ Route::get('ujian', 'UjianController@index')->name('ujian.index');
 Route::get('ujian/create', 'UjianController@create')->name('ujian.create');
 Route::post('ujian/store', 'UjianController@store')->name('ujian.store');
 Route::get('ujian/{id}/destroy', 'UjianController@destroy')->name('ujian.destroy');
+
+
+Route::get('mid', 'UtsController@index');
