@@ -23,4 +23,10 @@ Route::get('barang', 'API\ProductController@index');
 
 Route::get('barang/{id}', 'API\ProductController@show');
 
+// hapus data
+Route::delete('barang/{id}', 'API\ProductController@destroy');
+
+// tambah data
+Route::post('barang', 'API\ProductController@store');
+
 //});

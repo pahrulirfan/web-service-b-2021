@@ -10,7 +10,7 @@ class Product extends Model
     protected $primaryKey = 'id';
 
     // jika tidak mau memasukkan timestamp
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = ['name', 'description', 'price', 'category_id'];
 }
